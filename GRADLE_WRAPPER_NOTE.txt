@@ -1,0 +1,2 @@
+Android Studio can generate the Gradle wrapper automatically. Open the project and use Gradle Sync.
+Recommended environment: Android Studio Quail 4, JDK 17+, Android SDK 36.

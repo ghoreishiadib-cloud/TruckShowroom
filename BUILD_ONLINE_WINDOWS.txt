@@ -1,0 +1,9 @@
+ساخت APK بدون Android Studio
+
+1) در GitHub یک repository بساز.
+2) محتوای این ZIP را داخل repository آپلود کن.
+3) به Actions برو و Build TruckShowroom APK را اجرا کن.
+4) پس از اتمام Build، از بخش Artifacts فایل TruckShowroom-debug-apk را دانلود کن.
+5) فایل app-debug.apk را به گوشی منتقل و نصب کن.
+
+نیازی به نصب Android Studio روی ویندوز نیست.
