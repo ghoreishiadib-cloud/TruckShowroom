@@ -22,20 +22,21 @@ jobs:
         with:
           gradle-version: "9.6.1"
 
-     - name: Build APK
-  continue-on-error: true
-  run: |
-    set -o pipefail
-    gradle --no-daemon assembleDebug --stacktrace --info 2>&1 | tee build.log
+      - name: Build APK
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          gradle --no-daemon assembleDebug --stacktrace --info 2>&1 | tee build.log
 
-- name: Upload build log
-  if: always()
-  uses: actions/upload-artifact@v4
-  with:
-    name: TruckShowroom-Build-Log
-    path: build.log
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TruckShowroom-Build-Log
+          path: build.log
 
       - name: Upload APK
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: TruckShowroom-APK
