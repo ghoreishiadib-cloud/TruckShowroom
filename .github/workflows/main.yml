@@ -23,7 +23,7 @@ jobs:
           gradle-version: "9.6.1"
 
       - name: Build APK
-        continue-on-error: true
+       
         run: |
           set -o pipefail
           gradle --no-daemon assembleDebug --stacktrace --info 2>&1 | tee build.log
